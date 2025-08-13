@@ -1,0 +1,265 @@
+1) shift all the zeros to the left
+--------------------------------
+- 2 pointers starting from i=0
+- ptr1 keeps moving till non-zero
+- ptr2 goes from ptr1+1 till it finds a zero
+- swap elements at ptr1, ptr2
+- repeat till end of array
+
+2) merge overlapping intervals
+-----------------------------
+- Create a generic list res
+- Add 1st interval to res
+- Loop on all intervals 
+- Get last el in res
+- Get next el from intervals (at pos + 1)
+- Merge and overwrite last el in res if intervals overlap. Otherwise append next to res 
+
+
+3) Binary tree in-place convert it into a doubly-linked list
+-----------------------------------------------------------
+- Depth First Traverse - In Order for tree
+- While traversing, add root value to linked list 
+
+4) Breadth First traverse tree 
+------------------------------
+- Create a queue
+- Add 1st el in q
+- while queue is not empty
+- qLen = q.Length
+- Loop 1 -> qLen
+- int curr = q.Dequeue, print curr
+- if root->Left is not null, q.Enqueue(left)
+- if root->Right is not null, q.Enqueue(right)
+
+
+5) 'The sky is dark blue.' Can you reverse the order of this string? 
+-------------------------------------------------------------------
+- Convert string to char array
+- Create a function reverser(ref char[] chars, int start, int end) to swap chars while start < end
+- string reveresed = Call reverse for char array (start = 0, end = s.Length - 1)
+- Loop on chars in reveresed, find a space to identify word start, end
+- Call reverse for each word in char array
+- Output string(chars)
+
+6) You are given four words - apple, pear, pier, and pie. Can this be completely segmented? If yes, then how? 
+------------------------------------------------------------------------------------------------------------
+- Todo
+
+
+7) Here is a list of daily stock prices. Return the buy and sell prices to maximize the profit. 
+-----------------------------------------------------------------------------------------------
+- Set MaxProfit = 0
+- For each price in prices
+-     MaxSell = Get max from all successors
+-     Profit = MaxSell - curr price
+-     If Profit > MaxProfit then 
+-         MaxProfit = Profit
+-         BuyPrice = price
+-         SellPrice = MaxSell  
+- Output MaxProfit, BuyPrice, SellPrice
+
+
+8) Visible Nodes from right BST
+--------------------------------
+- Breadth First Traverse Tree, at each level -> Print last node
+
+
+9) Is tree a mirror from other tree?
+-----------------------------------
+- Depth first traverse tree - pre-order, validate following:
+-  bool check1, check2, check3;
+-  if (root1.data == root2.data) {
+	check1 = true
+   } else {
+        check1 = false
+   }  
+  if (root1.left is null && root2.right is null) check2 = true
+  else if (root1.left is null || root2.right is null) check2 =  false
+  else check2 = IsMirror(root1.left, root2.right)
+- if (root1.right is null && root2.left is null) check3 = true
+  else if (root1.right is null || root2.left is null) check3 = false
+  else check3 = IsMirror(root1.right, root2.left)
+- return check1 && check2 && check3
+
+
+10) Valid Palingrome
+-----------------
+- O(n)
+
+- 2 pointers: ptr1 at start of string, pt2 at end of string
+- isValid = true
+- Replace any non-alphanumeric ( string s = Regex.Replace(s, "[^a-zA-Z0-9]", String.Empty); )
+- while (ptr1 < ptr2)
+      if (s[ptr1] == s[ptr2]) 
+          isValid = true;
+          ptr1++; ptr2--;
+      else 
+          isValid = false
+          break;
+- Output isValid
+
+11) Triplets Zero Sum from arr
+----------------------------------
+- Create a Dictionary<int,int> dict 
+- int res = 0
+- bool triFound = false
+- for i = 0 -> n - 2
+      for j = i + 1 -> n - 1
+          diff = - (arr[i] + arr[j])
+          if (dict.ContainsKey(diff)) 
+	       Print arr[i], arr[j], dict[diff]
+               triFound = true
+          else
+               dict.Add(arr[j], arr[j])
+- If (!triFound) Print "Not found"          
+
+
+12) String anagrams (words with similar letters) - s1, s2
+----------------------------------------------
+- O(n)
+
+- Create dictionary<char, int> dict to have each char and # occurences
+- Loop on s1 and populate dict
+- Loop on s2 and decrement # occurences per char or remove char if occurences = 1 from dict
+- If any char in s2 is not found in dict or after we finish looping on s2 dict is not empty then IsAnagram = false else true 
+
+
+13) Running Sum - Subarrays count whose sum = K
+------------------------------------------------
+- O(n2)
+
+- int res = 0
+  Loop on arr
+      ptr = curr index + 1
+      RunningSum = curr el
+      if (K == RunningSum) res++
+      while ptr < arr length
+          RunningSum += arr[ptr]
+          if (K == RunningSum) res++
+  Output res
+
+
+14) Find Anomaly (Each element should be +1 of prev. Find anomaly)
+---------------------------------------------------------------
+- O(n): Loop on array, compare each el to next el until anomly is found else return -1
+- O(logn): Recurse by dividing array to left & right sub-arrays until size is 1 el (left == right) then compare el[right] to prev el[right-1]. 
+  Return result from recursion of left sub array and right sub array. 
+
+
+15) Remove Invalid Paranthesis. e.g: (A+B)) should be (A+B)
+-----------------------------------------------------------
+- Create a Stack S, List for indexesToRemove
+- Loop on string chars
+      If '(' found -> push to stack
+      If ')' found then
+          if stack empty? add index to indexesToRemove
+          else pop from stack
+- Rebuild string by removing indexesToRemove
+
+
+16) Graph Algo - BFT, DFT
+-----------------------
+- Create Dictionary<int, List<int>> vertices
+- bool directed
+- AddEdge: If not directed -> Add Edge twice
+
+- BFT Graph:
+------------
+- Create Dictionary<int, bool> visited
+- Create Queue q
+- q.Enqueue(start); visisted.Add(start, true);
+- while q.Count > 0
+      qLen = q.Count
+      for (int i = 0; i < qLen; i++)
+          int curr = q.Dequeue()
+          Print curr
+          List<int> nodes = g[curr]
+          foreach (int node in nodes)
+              if (!visited.ContainsKey(node))
+                   q.Add(node)
+                   visited.Add(node, true)
+
+17) K Closest points to origin
+---------------------------
+- For each point, calculate dist to origin as x2 + y2 in a dist array
+- Bubble sort on dist array for k iterations to get smallest distances sorted asc
+- Output dist array [ 0 - K-1 ]
+
+18) Pick Random index with weight
+-------------------------------
+- Create generic list<int> l
+- For i = 0; i < weights.Length; i++
+     for j = 0; j < weights[i]; j++
+         l.Add(i);
+- randomI = Random.Shared.Next(l.Length - 1);
+- Output l[randomI]
+
+19) Bubble Sot
+---------------
+- O(n2)
+
+-   for last = n-1; last >= 0; last--
+- 	for i = 0; i <= last; i++ 
+     	    if (el[i] > el[i+1]) swap them
+- Output arr
+
+
+20) Group shifted strings - "abd", "bce", "ac", "ya", "h", "p"
+-------------------------------------------------------------
+- Dictionary<string, List<string>> shiftedStrs;
+- Foreach string s in strs
+      string d = ""
+      for (int i = 1; i < s.Length; i++)
+          int dist = CalcDist(s[i-1], s[i])
+          d += dist.ToString() + "-"
+      if (shiftedStrs.ContainsKey(d)) 
+          List<string> sl = shiftedStrs[d];
+          sl.Add(s);
+      else
+          List<string> sl = new List<string> { s }
+          shiftedStrs.Add(d, sl)
+- Output shiftedStrs.Values.ToList();
+
+21) Queries on tree - Each node has char, count # occurences in subtree. E.g: Query(val = 2, search = 'b'), Query(val = 1, search = 'a')
+-------------------------------------------------------------------------------------------------------------------------------------
+- Extend node to have char field
+- Extend node to have Dictionary<char, int> dictNumOfOccur
+- Traverse Tree post order, populate dictNumOfOccur
+- Query tree easily
+
+
+22) Vertical Order Traverse of tree
+-----------------------------------
+- Extend tree node to add row, col fields
+- Create Dictionary<int, Dictionary<int,List<int>>> dictColRow
+- Insert root in dictColRow at 0,0 indexes
+- Traverse Tree using breadth first and populate dictColRow. root->left is at col-1, row+1. root->right is at col+1, row+1
+- Iterate on dictColRow col by col then row by row and print elements from List<int> at each cell
+
+23) Merge Sort
+----------
+- Recurse on array by splitting it into 2 sub-arrays
+      Middle = (Left + Right) / 2
+      if (Left == Right) 
+          return new List() { el[right] }
+      else 
+          L1 = Merge(arr, left, middle)
+          L2 = Merge(arr, middle+1, right)
+          return MergeLists(L1, L2)
+
+24) Quick Sort
+---------------
+- Pick Pivot
+- Loop on array to place pivot in place
+- Recurse to QuickSort left sub-array & right sub-array of pivot 
+
+
+
+
+
+
+
+
+
+
