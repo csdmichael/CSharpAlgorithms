@@ -1,0 +1,64 @@
+﻿using System;
+using System.Linq;
+
+public class SortedSearch
+{
+    public static int CountNumbers(int[] sortedArray, int lessThan)
+    {
+        int start = 0;
+        int end = sortedArray.Length - 1;
+        int mid = 0;
+        while (start <= end)
+        {
+            mid = (start + end) / 2;
+            if (sortedArray[mid] < lessThan)
+            {
+                if (mid < sortedArray.Length - 1 && sortedArray[mid + 1] < lessThan)
+                { // check id next value is also valid
+                    start = mid + 1;
+                    continue;
+                }
+                else
+                    return mid + 1;
+            }
+
+            if (sortedArray[mid] >= lessThan)
+            {
+                end = mid - 1;
+            }
+            else
+            {
+                start = mid + 1;
+            }
+        }
+        return 0;
+
+    }
+
+    /* old code
+    public static int CountNumbers(int[] sortedArray, int lessThan)
+    {
+        if (sortedArray.Length == 0) return 0;
+        if (sortedArray[0] >= lessThan) return 0;
+        if (sortedArray[sortedArray.Length - 1] >= lessThan)
+        {
+            int[] firstArray = sortedArray.Take(sortedArray.Length / 2).ToArray();
+            int[] secondArray = sortedArray.Skip(sortedArray.Length / 2).ToArray();
+            return CountNumbers(firstArray, lessThan) + CountNumbers(secondArray, lessThan);
+        }
+        else
+        {
+            return sortedArray.Length;
+        }
+    }
+    */
+    
+    /*
+    public static void Main(string[] args)
+    {
+        Console.WriteLine(SortedSearch.CountNumbers(new int[] { 1, 3, 5, 7 }, 4));
+        Console.ReadLine();
+    }
+    */
+    
+}
