@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 public class MergeOverlappingIntervals{
     public List<Interval> MergeIntervals(Interval[] intervals) {
         if (intervals == null) {

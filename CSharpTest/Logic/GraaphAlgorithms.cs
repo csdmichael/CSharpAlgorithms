@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 public class GraphAlgorithms {
     public void BFSGraph(int start, Graph g) {
         if (g == null) return;

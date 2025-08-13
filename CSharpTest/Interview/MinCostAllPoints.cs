@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
 public class MinCostAllPoints {
     public int MinCostConnectPoints(int[][] points) {
         List<Edge> lstDist = new List<Edge>();

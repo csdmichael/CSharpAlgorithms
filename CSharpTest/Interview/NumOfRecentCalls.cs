@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 public class NumOfRecentCalls {
     private Queue<int> q;
     private int limit;

@@ -1,18 +1,20 @@
+using System.Collections.Generic;
+
 public class VertOrderTreeTraversal{
-    public int[] TraverseVOrder(VTreeNode root) {
+    public int[] TraverseVOrder(VTreeNodeBT root) {
         if (root == null) {
             return null;
         }
         SortedDictionary<int, SortedDictionary<int, List<int>>> dictColRow 
             = new SortedDictionary<int, SortedDictionary<int, List<int>>>();
-        Queue<VTreeNode> q = new Queue<VTreeNode>();
+        Queue<VTreeNodeBT> q = new Queue<VTreeNodeBT>();
         root.row = 0;
         root.col = 0;
         q.Enqueue(root);
         while (q.Count > 0) {
             int qLen = q.Count;
             for (int i = 0; i < qLen; i++) {
-                VTreeNode curr = q.Dequeue();
+                VTreeNodeBT curr = q.Dequeue();
                 //Add node in dict
                 SortedDictionary<int, List<int>> dictCol;
                 if (dictColRow.ContainsKey(curr.col)) {
@@ -49,8 +51,8 @@ public class VertOrderTreeTraversal{
 
         foreach (KeyValuePair<int, SortedDictionary<int, List<int>>> col in dictColRow) {
             foreach(KeyValuePair<int, List<int>> row in col.Value) {
-                List<int> lstNodes = row.Value;
-                res.AddRange(lstNodes);
+                List<int> lstNodeBTs = row.Value;
+                res.AddRange(lstNodeBTs);
             }
         }
 
@@ -58,15 +60,15 @@ public class VertOrderTreeTraversal{
     }
 }
 
-public class VTreeNode {
-    public VTreeNode(int d) {
+public class VTreeNodeBT {
+    public VTreeNodeBT(int d) {
         data = d;
     }
     public int data;
     public int col;
     public int row;
-    public VTreeNode left;
-    public VTreeNode right;
+    public VTreeNodeBT left;
+    public VTreeNodeBT right;
 }
 
 // See https://aka.ms/new-console-template for more information

@@ -1,21 +1,21 @@
 ﻿using System;
 
-public class Node
+public class NodeBT
 {
     public int Value { get; set; }
 
-    public Node Left { get; set; }
+    public NodeBT Left { get; set; }
 
-    public Node Right { get; set; }
+    public NodeBT Right { get; set; }
 
-    public Node(int value, Node left, Node right)
+    public NodeBT(int value, NodeBT left, NodeBT right)
     {
         Value = value;
         Left = left;
         Right = right;
     }
 
-    public Node(int value)
+    public NodeBT(int value)
     {
         Value = value;
     }
@@ -23,9 +23,9 @@ public class Node
 
 public class BinarySearchTree
 {
-    public static bool Contains(Node root, int value)
+    public static bool Contains(NodeBT root, int value)
     {
-        Node current = root;
+        NodeBT current = root;
 
         if (current == null)
 
@@ -43,9 +43,9 @@ public class BinarySearchTree
     /*
     public static void Main(string[] args)
     {
-        Node n1 = new Node(1, null, null);
-        Node n3 = new Node(3, null, null);
-        Node n2 = new Node(2, n1, n3);
+        NodeBT n1 = new NodeBT(1, null, null);
+        NodeBT n3 = new NodeBT(3, null, null);
+        NodeBT n2 = new NodeBT(2, n1, n3);
 
         Console.WriteLine(Contains(n2, 4));
         Console.ReadLine();

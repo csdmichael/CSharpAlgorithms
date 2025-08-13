@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 public class InvalidPAranthesesE {
     public string RemoveMinInvalidParantheses(string s) {
         if (s == null) return null;

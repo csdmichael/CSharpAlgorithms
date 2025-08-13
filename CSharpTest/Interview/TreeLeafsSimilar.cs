@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 public class TreeLeafsSimilar {
     public bool LeafSimilar(TreeNode root1, TreeNode root2) {
         if (root1 == null && root2 == null) return true;

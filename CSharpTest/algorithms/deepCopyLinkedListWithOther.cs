@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 
-public class LinkedListNode
+public class LinkedListNodeBT
 {
     public int val { get; set; }
-    public LinkedListNode next { get; set; }
-    public LinkedListNode other { get; set; }
+    public LinkedListNodeBT next { get; set; }
+    public LinkedListNodeBT other { get; set; }
 
-    public LinkedListNode(int val, LinkedListNode next = null, LinkedListNode other = null)
+    public LinkedListNodeBT(int val, LinkedListNodeBT next = null, LinkedListNodeBT other = null)
     {
         this.val = val;
         this.next = next;
@@ -16,17 +16,17 @@ public class LinkedListNode
 
 public class LinkedListCopy
 {
-    public static LinkedListNode deepCopyLinkedList(LinkedListNode root)
+    public static LinkedListNodeBT deepCopyLinkedList(LinkedListNodeBT root)
     {
         if (root == null) return null;
-        LinkedListNode l2 = null;
-        Dictionary<LinkedListNode, LinkedListNode> dict = new Dictionary<LinkedListNode, LinkedListNode>();
-        LinkedListNode ptr1 = root;
-        LinkedListNode ptr2 = null;
+        LinkedListNodeBT l2 = null;
+        Dictionary<LinkedListNodeBT, LinkedListNodeBT> dict = new Dictionary<LinkedListNodeBT, LinkedListNodeBT>();
+        LinkedListNodeBT ptr1 = root;
+        LinkedListNodeBT ptr2 = null;
 
         while (ptr1 != null)
         {
-            ptr2 = new LinkedListNode(ptr1.val);
+            ptr2 = new LinkedListNodeBT(ptr1.val);
             if (l2 == null)
             {
                 l2 = ptr2;
@@ -35,10 +35,25 @@ public class LinkedListCopy
             ptr1 = ptr1.next;
         }
 
-        foreach (KeyValuePair<LinkedListNode, LinkedListNode> kvp in dict)
+        foreach (KeyValuePair<LinkedListNodeBT, LinkedListNodeBT> kvp in dict)
         {
-            kvp.Value.next = dict[kvp.Key.next];
-            kvp.Value.other = dict[kvp.Key.other];
+            if (kvp.Key.next == null)
+            {
+                kvp.Value.next = null;
+            }
+            else
+            {
+                kvp.Value.next = dict[kvp.Key.next];
+            }
+                
+            if (kvp.Key.other == null)
+            {
+                kvp.Value.other = null;
+            }
+            else
+            {
+                kvp.Value.other = dict[kvp.Key.other];
+            }
         }
 
         return l2;

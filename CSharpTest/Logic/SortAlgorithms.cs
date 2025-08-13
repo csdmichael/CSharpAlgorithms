@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 public class SortAlgorithms {
     public int[] MergeSort(int[] array) {
         List<int> sortedList = new List<int>();

@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 public class ListAlgorithms {
     public List<int> CommonElementsTwoLists(int[] arr1, int[] arr2) {
         int pos1 = 0; int pos2 = 0;

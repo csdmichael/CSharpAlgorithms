@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Security.Cryptography.X509Certificates;
 
@@ -102,10 +104,7 @@ public class CrackFB {
         return ll;
     }
 
-  static void Main(string[] args) {
-    // Call countDistinctTriangles() with test cases here
-    
-  }
+
   
   private int countDistinctTriangles(int[][] arr) {
     // Write your code here

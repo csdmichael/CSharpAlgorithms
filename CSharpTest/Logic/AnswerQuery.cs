@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 public class AnswerQuery {
   public int[] answerQueries(List<Query> queries, int N) {
     if (queries == null || N == 0) {

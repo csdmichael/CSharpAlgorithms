@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 public class WordBreak{
     public void wordBreak(List<string> dict, string word, string output) {
         if (String.IsNullOrEmpty(word)) {

@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Linq;
+
 public class GroupAnagrams {
     public IList<IList<string>> GetGroupAnagrams(string[] strs) {
         IList<IList<string>> res = new List<IList<string>>();

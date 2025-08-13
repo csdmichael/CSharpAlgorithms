@@ -10,7 +10,13 @@ C:\Learning\CSharpTest\CSharpTest\bin\Debug\nunit.framework.xml
 C:\Learning\CSharpTest\CSharpTest\obj\Debug\CSharpTest.csproj.CopyComplete
 C:\Learning\CSharpTest\CSharpTest\obj\Debug\CSharpTest.csproj.AssemblyReference.cache
 C:\Learning\CSharpTest\CSharpTest\obj\Debug\CSharpTest.csproj.SuggestedBindingRedirects.cache
-C:\Learning\CSharp\CSharpTest\obj\Debug\CSharpTest.csproj.AssemblyReference.cache
 C:\Learning\CSharp\CSharpTest\obj\Debug\CSharpTest.csproj.CoreCompileInputs.cache
 C:\Learning\CSharp\CSharpTest\obj\Debug\CSharpTest.exe
 C:\Learning\CSharp\CSharpTest\obj\Debug\CSharpTest.pdb
+C:\Learning\CSharp\CSharpTest\bin\Debug\CSharpTest.exe.config
+C:\Learning\CSharp\CSharpTest\bin\Debug\CSharpTest.exe
+C:\Learning\CSharp\CSharpTest\bin\Debug\CSharpTest.pdb
+C:\Learning\CSharp\CSharpTest\bin\Debug\nunit.framework.dll
+C:\Learning\CSharp\CSharpTest\bin\Debug\nunit.framework.pdb
+C:\Learning\CSharp\CSharpTest\bin\Debug\nunit.framework.xml
+C:\Learning\CSharp\CSharpTest\obj\Debug\CSharpTest.csproj.CopyComplete

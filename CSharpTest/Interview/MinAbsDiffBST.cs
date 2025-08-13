@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Linq;
+
 public class MinAbsDiffBST {
     private SortedDictionary<int, bool> s;
     private List<int> data;

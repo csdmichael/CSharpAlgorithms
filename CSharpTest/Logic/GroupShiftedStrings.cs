@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Linq;
+
 public class GroupShiftedStrings{
     private int CalculateDisance(char prev, char curr) {
         int p = prev - 'a';

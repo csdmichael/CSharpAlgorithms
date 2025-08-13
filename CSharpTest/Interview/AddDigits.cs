@@ -1,3 +1,5 @@
+using System;
+
 public class DigitsAddition {
     public int AddDigits(int num) {
         string s = num.ToString();

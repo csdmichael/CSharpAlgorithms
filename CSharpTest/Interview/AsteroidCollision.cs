@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 public class AsteroidCollision {
     public int[] PerformAsteroidCollision(int[] asteroids) {
         Stack<int> sp = new Stack<int>();

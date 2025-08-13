@@ -8,13 +8,13 @@ namespace CSharpTest.Solved
 {
     public class BFS_Tree
     {
-        public static void LeftTree(Node root)
+        public static void LeftTree(NodeBT root)
         {
             string[] result = new string[] { };
 
             if (root != null)
             {
-                Queue<Node> queue = new Queue<Node>();
+                Queue<NodeBT> queue = new Queue<NodeBT>();
                 queue.Enqueue(root);
 
                 while (queue.Count > 0)
@@ -23,7 +23,7 @@ namespace CSharpTest.Solved
 
                     for (int i = 1; i <= n; i++)
                     {
-                        Node temp = queue.Dequeue();
+                        NodeBT temp = queue.Dequeue();
                         if (i == 1)
                             Console.Write(temp.Value + " ");
 
@@ -42,13 +42,13 @@ namespace CSharpTest.Solved
 
         }
 
-        public static void RightTree(Node root)
+        public static void RightTree(NodeBT root)
         {
             string[] result = new string[] { };
 
             if (root != null)
             {
-                Queue<Node> queue = new Queue<Node>();
+                Queue<NodeBT> queue = new Queue<NodeBT>();
                 queue.Enqueue(root);
 
                 while (queue.Count > 0)
@@ -57,7 +57,7 @@ namespace CSharpTest.Solved
 
                     for (int i = 1; i <= n; i++)
                     {
-                        Node temp = queue.Dequeue();
+                        NodeBT temp = queue.Dequeue();
                         if (i == n)
                             Console.Write(temp.Value + " ");
 

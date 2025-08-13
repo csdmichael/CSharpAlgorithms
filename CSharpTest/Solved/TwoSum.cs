@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class TwoSum
+class TwoSum2
 {
     public static Tuple<int, int> FindTwoSum(IList<int> list, int sum)
     {

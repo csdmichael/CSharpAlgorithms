@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 public class MiscAlgorithms {
 
     //O(2^n)

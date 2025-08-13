@@ -1,3 +1,6 @@
+using NUnit.Framework.Constraints;
+using System.Collections.Generic;
+
 public class MergeOverlappingIntervalsE {
     public List<Interval> MergeIntervals(Interval[] intervals) {
         if (intervals == null) return null;

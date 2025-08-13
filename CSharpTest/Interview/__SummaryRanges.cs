@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 public class SummaryRanges {
     public IList<string> GetSummaryRanges(int[] nums) {
         if (nums == null) return null;

@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 public class KidsWithGreatestCandies {
     public IList<bool> KidsWithCandies(int[] candies, int extraCandies) {
         int max = GetMax(candies);

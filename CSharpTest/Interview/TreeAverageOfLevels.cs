@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 public class TreeAverageOfLevels {
     public IList<double> AverageOfLevels(TreeNode root) {
         if (root == null) return null;

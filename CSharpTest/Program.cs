@@ -10,12 +10,12 @@ class Program
 
         /*
             TreeAlgorithms ta = new TreeAlgorithms();
-            Node root = new Node("5");
-            root.left = new Node("3");
-            root.right = new Node("7");
-            //Node root = null;
-            //ta.TreeVisibleNodesLeft(root);
-            //ta.TreeVisibleNodesRight(root);
+            NodeBT root = new NodeBT("5");
+            root.left = new NodeBT("3");
+            root.right = new NodeBT("7");
+            //NodeBT root = null;
+            //ta.TreeVisibleNodeBTsLeft(root);
+            //ta.TreeVisibleNodeBTsRight(root);
             ta.TraverseBFS(root);
         */
 
@@ -89,9 +89,9 @@ class Program
         */
         /*
         MiscAlgorithms m = new MiscAlgorithms();
-        TreeNode root = new TreeNode(2);
-        root.left = new TreeNode(1);
-        root.right = new TreeNode(3);
+        TreeNodeBT root = new TreeNodeBT(2);
+        root.left = new TreeNodeBT(1);
+        root.right = new TreeNodeBT(3);
 
         QueryOnTree[] q = new QueryOnTree[] {
             new QueryOnTree(){nodeVal = 1, searchChar = 'a'},
@@ -112,25 +112,25 @@ class Program
             });
         */
         /*
-            TreeNode root = new TreeNode(2);
-            root.left = new TreeNode(1);
-            root.right = new TreeNode(3);
+            TreeNodeBT root = new TreeNodeBT(2);
+            root.left = new TreeNodeBT(1);
+            root.right = new TreeNodeBT(3);
             LinkedList ll = c.BTtoLL(root);
         */
         /*
-            TreeNode root1 = new TreeNode(2);
-            root1.left = new TreeNode(1);
-            root1.right = new TreeNode(3);
-            root1.right.right = new TreeNode(7);
+            TreeNodeBT root1 = new TreeNodeBT(2);
+            root1.left = new TreeNodeBT(1);
+            root1.right = new TreeNodeBT(3);
+            root1.right.right = new TreeNodeBT(7);
 
-            TreeNode root2 = new TreeNode(2);
-            root2.left = new TreeNode(1);
-            root2.right = new TreeNode(3);
+            TreeNodeBT root2 = new TreeNodeBT(2);
+            root2.left = new TreeNodeBT(1);
+            root2.right = new TreeNodeBT(3);
 
-            TreeNode root3 = new TreeNode(2);
-            root3.left = new TreeNode(3);
-            root3.right = new TreeNode(1);
-            root3.left.left = new TreeNode(7);
+            TreeNodeBT root3 = new TreeNodeBT(2);
+            root3.left = new TreeNodeBT(3);
+            root3.right = new TreeNodeBT(1);
+            root3.left.left = new TreeNodeBT(7);
 
             TreeMirror tm = new TreeMirror();
             bool res1 = tm.IsTreeMirror(root1, root2);
@@ -154,12 +154,12 @@ class Program
         */
         /*
             RangeSumBST r = new RangeSumBST();
-            TreeNode root = new TreeNode(9);
-            root.left = new TreeNode(5);
-            root.right = new TreeNode(12);
-            root.left.left = new TreeNode(2);
-            root.left.right = new TreeNode(6);
-            root.right.right = new TreeNode(14);
+            TreeNodeBT root = new TreeNodeBT(9);
+            root.left = new TreeNodeBT(5);
+            root.right = new TreeNodeBT(12);
+            root.left.left = new TreeNodeBT(2);
+            root.left.right = new TreeNodeBT(6);
+            root.right.right = new TreeNodeBT(14);
             int res = r.GetRangeSumBST(6, 12, root);
             */
         /*
@@ -183,14 +183,14 @@ class Program
         */
         /*
             VOrderTreeTraversal v = new VOrderTreeTraversal();
-            TreeNodeExt root = new TreeNodeExt(1);
-            root.left = new TreeNodeExt(2);
-            root.right = new TreeNodeExt(6);
-            root.left.right = new TreeNodeExt(7);
-            root.left.right.left = new TreeNodeExt(4);
-            root.left.right.right = new TreeNodeExt(5);
-            root.left.right.right.left = new TreeNodeExt(8);
-            root.right.left = new TreeNodeExt(3);
+            TreeNodeBTExt root = new TreeNodeBTExt(1);
+            root.left = new TreeNodeBTExt(2);
+            root.right = new TreeNodeBTExt(6);
+            root.left.right = new TreeNodeBTExt(7);
+            root.left.right.left = new TreeNodeBTExt(4);
+            root.left.right.right = new TreeNodeBTExt(5);
+            root.left.right.right.left = new TreeNodeBTExt(8);
+            root.right.left = new TreeNodeBTExt(3);
             List<int> res = v.TraverseVOrder(root);
             */
         /*
@@ -235,10 +235,10 @@ class Program
           */
         /*
           TreeToLinkedList t = new TreeToLinkedList();
-          TNode r = new TNode(5);
-          r.left = new TNode(3);
-          r.right = new TNode(8);
-          r.right.right = new TNode(11);
+          TNodeBT r = new TNodeBT(5);
+          r.left = new TNodeBT(3);
+          r.right = new TNodeBT(8);
+          r.right.right = new TNodeBT(11);
           LList res = t.TransformTreeToList(r);  
           */
         /*
@@ -303,14 +303,14 @@ class Program
         //-------------------------------------------------------------------------------------
         /*
         VertOrderTreeTraversal v = new VertOrderTreeTraversal();
-            VTreeNode root = new VTreeNode(1);
-            root.left = new VTreeNode(2);
-            root.right = new VTreeNode(6);
-            root.left.right = new VTreeNode(7);
-            root.left.right.left = new VTreeNode(4);
-            root.left.right.right = new VTreeNode(5);
-            root.left.right.right.left = new VTreeNode(8);
-            root.right.left = new VTreeNode(3);
+            VTreeNodeBT root = new VTreeNodeBT(1);
+            root.left = new VTreeNodeBT(2);
+            root.right = new VTreeNodeBT(6);
+            root.left.right = new VTreeNodeBT(7);
+            root.left.right.left = new VTreeNodeBT(4);
+            root.left.right.right = new VTreeNodeBT(5);
+            root.left.right.right.left = new VTreeNodeBT(8);
+            root.right.left = new VTreeNodeBT(3);
             int[] res = v.TraverseVOrder(root);
            */
         /*
@@ -497,7 +497,7 @@ class Program
         */
         /*
         SortedArrayToBinarySearchTree s = new SortedArrayToBinarySearchTree();
-        TreeNode res = s.SortedArrayToBST(new int[] {-10,-3,0,5,9});
+        TreeNodeBT res = s.SortedArrayToBST(new int[] {-10,-3,0,5,9});
         */
         /*
         DecimalToBinary d = new DecimalToBinary();
@@ -518,14 +518,17 @@ class Program
         int res2 = n.GetNextNumberSameDigits(312);
         int res3 = n.GetNextNumberSameDigits(647521);
         */
-        LinkedListNode n4 = new LinkedListNode(4);
-        LinkedListNode n3 = new LinkedListNode(3, n4);
-        LinkedListNode n2 = new LinkedListNode(2, n3);
-        LinkedListNode n1 = new LinkedListNode(1, n2);
+        /*
+        LinkedListNodeBT n4 = new LinkedListNodeBT(4);
+        LinkedListNodeBT n3 = new LinkedListNodeBT(3, n4);
+        LinkedListNodeBT n2 = new LinkedListNodeBT(2, n3);
+        LinkedListNodeBT n1 = new LinkedListNodeBT(1, n2);
         n1.other = n4;
         n2.other = n3;
         n4.other = n4;
-        LinkedListNode res = LinkedListCopy.deepCopyLinkedList(n1);
+        LinkedListNodeBT res = LinkedListCopy.deepCopyLinkedList(n1);
+        */
+
         Console.ReadLine();
     }
 }

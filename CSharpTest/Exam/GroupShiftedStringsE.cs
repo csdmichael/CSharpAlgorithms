@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Linq;
+
 public class GroupShiftedStringsE{
     public List<List<string>> GetShiftedStrsGroups(string[] strings) {
         if (strings == null) {
