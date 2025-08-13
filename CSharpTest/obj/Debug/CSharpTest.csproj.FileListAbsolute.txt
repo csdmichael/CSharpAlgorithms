@@ -20,3 +20,4 @@ C:\Learning\CSharp\CSharpTest\bin\Debug\nunit.framework.dll
 C:\Learning\CSharp\CSharpTest\bin\Debug\nunit.framework.pdb
 C:\Learning\CSharp\CSharpTest\bin\Debug\nunit.framework.xml
 C:\Learning\CSharp\CSharpTest\obj\Debug\CSharpTest.csproj.CopyComplete
+C:\Learning\CSharp\CSharpTest\obj\Debug\CSharpTest.csproj.AssemblyReference.cache

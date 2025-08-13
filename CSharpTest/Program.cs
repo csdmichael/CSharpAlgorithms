@@ -528,7 +528,7 @@ class Program
         n4.other = n4;
         LinkedListNodeBT res = LinkedListCopy.deepCopyLinkedList(n1);
         */
-
+        string res = LongestPalindrome.GetLongestPlaindrome("abccbzzxzdzx21");
         Console.ReadLine();
     }
 }
