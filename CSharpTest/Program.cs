@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using CSharpTest.algorithms;
 using System;
 
 class Program
@@ -528,7 +529,8 @@ class Program
         n4.other = n4;
         LinkedListNodeBT res = LinkedListCopy.deepCopyLinkedList(n1);
         */
-        string res = LongestPalindrome.GetLongestPlaindrome("abccbzzxzdzx21");
+        //string res = LongestPalindrome.GetLongestPlaindrome("abccbzzxzdzx21");
+        int minDepth = minTreeDepth.GetMinTreeDepth(new TreeNode(5, new TreeNode(3, new TreeNode(1))));
         Console.ReadLine();
     }
 }

@@ -50,7 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="algorithms\deepCopyLinkedListWithOther.cs" />
+    <Compile Include="algorithms\islandPerimeter.cs" />
     <Compile Include="algorithms\longestPalindrome.cs" />
+    <Compile Include="algorithms\minTreeDepth.cs" />
     <Compile Include="Final\NextNumber.cs" />
     <Compile Include="Solved\BFS_Tree.cs" />
     <Compile Include="Solved\Test_Account.cs" />
